@@ -1,6 +1,21 @@
-To build do:
+To build:
+
+First, source the correct file in etc:
 
 ```
+source etc/anvil_setup_gnu.csh
+source etc/anvil_setup_intel.csh
+```
+or
+```
+. etc/anvil_setup_gnu.sh
+. etc/anvil_setup_intel.sh
+```
+Then build:
+
+```
+mkdir bin
+cd bin
 cmake ../src/ -DNETCDF_INCLUDES=$NETCDF_INCLUDES -DNETCDF_LIBRARIES="$NETCDF_LIBRARIES"
 ```
 
